@@ -2,8 +2,18 @@
 html(lang="en")
   head
     link(rel='stylesheet', href='/css/main.css')
-    //link(rel='stylesheet', href='/css/pink.css')
-  body(class="#{ current }")
-    img.harp-logo(src="/img/harp-3.png")
-    .hero
-      h1 The<br /> promise<br /> of the<br /> web<br />
+    //- link(rel='stylesheet', href='/css/pink.css')
+    script(type="text/javascript", src="//use.typekit.net/yxj2ghr.js")
+    script(type="text/javascript")
+      try{Typekit.load();}catch(e){}
+  body
+    header
+      img(src="/img/harp-circle.png")
+    .body
+      .content
+        h1 Thank you <strong>Mozilla</strong>!
+        p.thanks Special thanks to Diane, Diedem, Pascal, David, and all the mentors for their support and feedback. To the corhorts and alumni for their support. Best of luck on the pitches and what lies ahead.
+        p.team &mdash; Harp Team
+        .moz-logos
+          img.mozilla(src="/img/mozilla.png")
+          img.webfwd(src="/img/webfwd.png")

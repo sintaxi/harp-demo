@@ -1,33 +1,95 @@
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
 body {
   padding: 0;
   margin: 0;
-  height: 100%;
-  background: #e8e6e1;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 1.4em;
+}
+header {
+  background: #333332;
+  border-bottom: darken(#f4f4f4, 5%) solid 10px;
+  text-align: center;
+  padding: 20px 0;
+  // margin-top: 50px;
+  margin-bottom: 70px;
+  > img {
+    width: 200px;
+    margin: 0 0 -70px 0;
+  }
+}
+p {
+  margin: 1em 0;
+  .clearfix();
+}
+.thanks {
+  font-size: 20px;
+  line-height: 1.6em;
   color: #333332;
-  padding: 50px;
-}
-.harp-logo {
-  float: left;
-  width: 38%;
-  opacity: .2;
-  max-width: 300px;
-}
-.hero {
-  float: left;
-  width: 58%;
-  margin-left: 4%;
+  font-family: "jubilat";
+  margin-top: 0;
 }
 h1 {
-  font-size: 6em;
-  line-height: 1em;
   margin: 0;
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  padding: 0;
+  margin: 0 0 0.5em 0;
+  font-family: "jubilat";
+  font-style: italic;
+  font-size: 4em;
+  line-height: 1.2em;
+
 }
-@media (max-width: 570px) {
-  body {
-    padding: 20px;
-  }
+.body {
+  padding: 20px;
+}
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.team {
+  font-family: "jubilat";
+  text-align: right;
+  font-style: italic;
+  clear: both;
+}
+.moz-logos {
+  margin-top: 50px;
+}
+.mozilla {
+  max-width: 200px;
+  float: left;
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+.webfwd {
+  position: relative;
+  top: -12px;
+  float: left;
+}
+
+@media (max-width: 480px) {
   h1 {
+    text-align: center;
     font-size: 3.5em;
+  }
+  header {
+    margin-bottom: 50px;
+    > img {
+      width: 150px;
+    }
   }
 }
